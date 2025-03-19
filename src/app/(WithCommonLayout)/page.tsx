@@ -10,23 +10,23 @@ const Homepage = () => {
   return (
     <div className="overflow-x-hidden">
       <div id="home">
-      <Hero />
+        <Hero />
       </div>
       <div id="skill">
-      <Skills />
+        <Skills />
       </div>
       <div id="projects">
-      <Project />
+        <Project />
       </div>
       <div id="work">
-      <WorksType />
+        <WorksType />
       </div>
       <div id="experience">
-      <Study />
+        <Study />
       </div>
-      <Blog/>
-      <div id="contact" >
-      <Contact />
+      <Blog />
+      <div id="contact">
+        <Contact />
       </div>
     </div>
   );

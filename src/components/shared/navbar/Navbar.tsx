@@ -5,11 +5,16 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { IoCloseSharp, IoMenu } from "react-icons/io5";
 
+type NavLink = {
+  name: string;
+  id: string;
+};
+
 const Navbar = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleScroll = (id: any) => {
+  const handleScroll = (id: string) => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -17,13 +22,12 @@ const Navbar = () => {
     }
   };
 
-  const navLinks = [
+  const navLinks:NavLink[] = [
     { name: "Home", id: "home" },
     { name: "Skill", id: "skill" },
     { name: "Projects", id: "projects" },
     { name: "Work", id: "work" },
     { name: "Experience", id: "experience" },
-    { name: "Blog", id: "blog" },
     { name: "Contact", id: "contact" },
   ];
 
@@ -45,7 +49,7 @@ const Navbar = () => {
     <button
       onClick={() => handleScroll(link.id)}
       className={`text-lg font-semibold ${
-        pathname === "/" && link.id !== "/" && pathname === link.path
+        pathname === "/" && link.id !== "/" && pathname === link.id
           ? "text-cyan-400 underline"
           : "text-white hover:text-cyan-400"
       }`}
@@ -74,9 +78,9 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <Link
               key={link.name}
-              href={link.path}
+              href={link.id}
               className={`block text-lg font-semibold ${
-                pathname === link.path
+                pathname === link.id
                   ? "text-cyan-400 underline"
                   : "text-white hover:text-cyan-400"
               }`}
