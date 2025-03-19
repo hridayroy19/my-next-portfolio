@@ -1,3 +1,4 @@
+import Blog from "@/components/home/Blog";
 import Contact from "@/components/home/Contact";
 import Hero from "@/components/home/Hero";
 import Project from "@/components/home/Projcet";
@@ -13,6 +14,7 @@ const Homepage = () => {
       <Project />
       <WorksType />
       <Study />
+      <Blog/>
       <Contact />
     </div>
   );

@@ -5,7 +5,7 @@ import { MdOutlineAddIcCall } from "react-icons/md";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-10 text-white">
+    <div className=" px-4 sm:px-6 lg:px-10 text-white">
       <div className="text-center mt-8">
         <h3 className="text-3xl sm:text-4xl font-semibold">
           Contact <span className="text-cyan-600">Me</span>
@@ -46,7 +46,7 @@ const Contact = () => {
                       hrhridoyroy503@gmail.com
                     </span>
                   </p>
-                  <p className="flex gap-4 mb-2 items-center">
+                  <p className="flex gap-4 mt-2 mb-2 items-center">
                     <MdOutlineAddIcCall className="text-white p-2 bg-cyan-600 rounded-full" />
                     <span className="text-[18px] sm:text-[22px]">
                       +8801738211936
@@ -64,7 +64,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

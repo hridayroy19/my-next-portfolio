@@ -27,8 +27,8 @@ const Project = () => {
   }, []);
 
   return (
-    <div className="xl:py-28 lg:py-20 py-10 text-white xl:px-24 md:px-6 px-4">
-      <h1 className="text-center uppercase font-bold text-white text-3xl lg:text-5xl mb-10">
+    <div className="lg:py-20 py-10 text-white xl:px-24 md:px-6 px-4">
+      <h1 className="text-center uppercase font-bold text-white text-3xl lg:text-5xl mb-20">
         My Projcet
       </h1>
       <div className="grid xl:grid-cols-3 gap-11 lg:grid-cols-2 md:grid-cols-2 ">

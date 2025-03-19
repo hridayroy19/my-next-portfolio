@@ -13,7 +13,7 @@ export default function Hero() {
       <div className="flex md:flex-row flex-col-reverse items-center gap-12 w-full max-w-7xl">
         {/* Left side */}
         <div className="flex-1 text-start">
-          <h1 className="text-white text-3xl lg:text-5xl font-bold">
+          <h1 className="text-white text-3xl lg:text-4xl xl:text-5xl  font-bold">
             My Name is <span className="text-cyan-400">Hridoy</span>
           </h1>
           <div className="flex gap-2 md:text-2xl text-lg md:leading-normal leading-5 mt-4 font-bold text-gray-300 justify-start">

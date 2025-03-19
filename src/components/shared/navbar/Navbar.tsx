@@ -17,7 +17,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="w-full fixed top-0 z-50 py-5 border-y border-b-gray-800 px-8 lg:px-20 bg-[#0e1423] flex justify-between items-center shadow-2xl">
+    <div className="w-full fixed top-0 z-50 py-5 border-y border-b-gray-800 px-8 xl:px-20 bg-[#0e1423] flex justify-between items-center shadow-2xl">
       {/* Branding */}
       <div className="flex items-center">
         <span className="text-white text-2xl font-bold">Hridoy</span>

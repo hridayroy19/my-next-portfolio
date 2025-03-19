@@ -38,11 +38,12 @@ const WorksType = () => {
   ];
 
   return (
-    <div id="work" className=" xl:pt-12 pt-8 lg:px-10  text-white max-w-7xl mx-auto">
+    <div className="  text-white max-w-7xl mx-auto"
+    >
       <h1
         data-aos="fade-up"
         data-aos-duration="2000"
-        className="text-center uppercase mt-4 mb-16 lg:mt-12 text-xl font-bold md:text-3xl lg:text-5xl"
+        className="text-center uppercase mt-4 mb-10 lg:mt-5 text-xl font-bold md:text-3xl lg:text-5xl"
       >
         What I do
       </h1>

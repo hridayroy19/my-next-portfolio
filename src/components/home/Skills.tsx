@@ -31,7 +31,7 @@ const Skills = () => {
   };
 
   return (
-    <div className=" lg:mt-5 mt-14 lg:flex justify-evenly items-center gap-5 text-white max-w-7xl mx-auto ">
+    <div className=" lg:flex justify-evenly items-center gap-5 text-white max-w-7xl mx-auto ">
       {/* Tech Stack Section */}
       <div className="flex-1">
         <h1 className="text-center uppercase font-bold text-white text-3xl lg:text-5xl mb-10">
@@ -63,7 +63,7 @@ const Skills = () => {
       </div>
 
       {/* Lottie Animation Section */}
-      <div className="flex-1 flex justify-center mt-10 lg:mt-0">
+      <div className="flex-1 flex justify-center mt-5 lg:mt-0">
         <div className="w-full max-w-[400px]  lg:max-w-[450px]">
           <Lottie options={defaultOptions} width="100%" height="100%" />
         </div>
