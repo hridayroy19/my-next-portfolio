@@ -1,0 +1,71 @@
+[
+    {
+      "id": 12,
+      "projcet_name": "HomifyEstate",
+      "title": " MERN Stack Project ",
+      "about": "An online bookstore where users can explore books by category, read descriptions, and purchase them. It includes a search feature, user reviews, and a secure checkout process for a smooth book-buying experience.",
+      "imgOne": "https://i.ibb.co.com/dsXHJ1Zv/Screenshot-2025-03-12-214933.png",
+      "technology": "React| Tailwinds| Daisy UI| Express js | node js| Mongoose & MongoDB| Nodemailer | SSLcommerz| Firebase| Jwt | Hot toast | Aos | Axios | Swiper | Rechart | Messenger Chart | React Scroll | slider | React Shere | React Spinners",
+      "github_link_clint": "https://github.com/hridayroy19/Book-shope-as4-clint",
+      "github_link_server": "https://github.com/hridayroy19/book-shop-assortment",
+      "live_link": "https://book-shop-assignment4.vercel.app/"
+    },
+    {
+      "id": 1,
+      "projcet_name": "HomifyEstate",
+      "title": " MERN Stack Project ",
+      "about": "The HomifyEstate System is designed to be a comprehensive solution for property booking and real estate management",
+      "imgOne": " https://i.ibb.co/qNWWnVp/Screenshot-2024-07-06-104958.png",
+      "technology": "React| Tailwinds| Daisy UI| Express js | node js| Mongoose & MongoDB| Nodemailer | SSLcommerz| Firebase| Jwt | Hot toast | Aos | Axios | Swiper | Rechart | Messenger Chart | React Scroll | slider | React Shere | React Spinners",
+      "github_link_clint": "https://github.com/uttombarmon/homifyestatef",
+      "github_link_server": "https://github.com/uttombarmon/homifyestatef",
+      "live_link": "https://homifyestate-8556d.web.app/"
+    },
+  
+    {
+      "id": 2,
+      "projcet_name": "Flavor Foods ",
+      "title": " MERN Stack Project ",
+      "about": "The FreshEats Delivery System is designed to be a comprehensive solution for online food ordering and delivery management",
+      "imgOne": "https://i.ibb.co/xMCBfwG/Screenshot-2024-07-07-103912.png",
+      "technology": "React | Tailwinds | Daisy UI | Node.js | Express | MongoDB | Firebase | Hot toast | Axios | Tan stack query",
+      "github_link_clint": "https://github.com/hridayroy19/food-project",
+      "github_link_server": "https://github.com/hridayroy19/food-project-server",
+      "live_link": "https://food-app-e3026.web.app/"
+    },
+    {
+      "id": 5,
+      "projcet_name": "Aptouch Polytechnic Institute",
+      "title": " Collage Project ",
+      "about": "This Collage projcet , user friendly and collage management",
+      "imgOne": "https://i.ibb.co.com/fx6xXLN/Screenshot-2024-12-25-145113.png",
+      "technology": "React| Tailwinds| Daisy UI| Express js ",
+      "github_link_clint": "https://github.com/hridayroy19/collage-project-clint",
+      "github_link_server": "https://github.com/hridayroy19/collage-server-site",
+      "live_link": "https://collage-project-three.vercel.app/"
+    },
+    {
+      "id": 3,
+      "projcet_name": "Building Management:",
+      "title": " MERN Stack Project ",
+      "about": "It is an online hostel now you can easily book rooms online Manager can control everything through the website",
+      "imgOne": "https://i.ibb.co/SczpnQk/Screenshot-2024-07-07-104512.png",
+      "technology": ": React | Tailwinds | Node.js | Express | MongoDB | Firebase| JWT, Tan stack query",
+      "project_features": " my projcet discription",
+      "project_featuresTow": " my projcet discription",
+      "github_link_clint": "https://github.com/hridayroy19/Building-_Management-_Clint_Site-12",
+      "github_link_server": "https://github.com/hridayroy19/Building-_Management-_server_12",
+      "live_link": "https://building-menagemant.web.app/"
+    },
+    {
+      "id": 41,
+      "projcet_name": "Tour Website",
+      "title": " Frontend Project ",
+      "about": "A travel website showcasing top tourist destinations with detailed guides, images, and booking options. Users can explore different places, plan their trips, and access travel tips for a hassle-free experience.",
+      "imgOne": "https://i.ibb.co.com/9kdG9VQL/Screenshot-2025-03-12-215420.png",
+      "technology": "React|Tailwinds",
+      "github_link_clint": "https://github.com/hridayroy19/healthcare-task-project",
+      "github_link_server": "https://github.com/hridayroy19/healthcare-task-project",
+      "live_link": "https://tourmaline-dragon-9979f9.netlify.app/"
+    }
+  ]
