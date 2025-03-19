@@ -38,7 +38,7 @@ const WorksType = () => {
   ];
 
   return (
-    <div id="work" className="pt-12 px-6 md:px-10 pb-12 text-white max-w-7xl mx-auto">
+    <div id="work" className=" xl:pt-12 pt-8 lg:px-10  text-white max-w-7xl mx-auto">
       <h1
         data-aos="fade-up"
         data-aos-duration="2000"
@@ -61,12 +61,12 @@ const WorksType = () => {
         <div
           data-aos="zoom-in"
           data-aos-duration="2000"
-          className="flex-1 pl-2 mt-8 lg:mt-0"
+          className="grid lg:grid-cols-1 md:grid-cols-2 grid-cols-1 justify-center text-center items-center  pl-2 mt-8 lg:mt-0"
         >
           {services.map((item) => (
             <div
               key={item.id}
-              className="card px-6 py-5 mt-8 w-[90%] sm:w-[400px] lg:w-[500px] xl:w-[600px] mx-auto shadow-lg shadow-cyan-500"
+              className="card px-6 py-5 mt-8 w-[90%] md:w-[95%] h-[80%] sm:w-[400px] lg:w-[500px] xl:w-[600px] mx-auto shadow-lg shadow-cyan-500"
             >
               <h4 className="font-semibold text-2xl text-yellow-600 mb-3">
                 {item.name}
