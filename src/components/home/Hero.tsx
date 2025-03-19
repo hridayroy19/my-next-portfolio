@@ -79,7 +79,7 @@ export default function Hero() {
           {/* Outer ring */}
           <div className="absolute inset-0 flex items-center justify-center">
             <svg
-              className="lg:w-full w-[270px] lg:h-full animate-spin-slow"
+              className="lg:w-[90%] w-[280px] lg:h-full animate-spin-slow"
               viewBox="0 0 200 200"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -115,7 +115,7 @@ export default function Hero() {
           </div>
 
           {/* Profile Image */}
-          <div className="relative z-10 w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] md:w-[200px] md:h-[310px] lg:w-[280px] lg:h-[340px] mx-auto rounded-full overflow-hidden flex items-center justify-center ">
+          <div className="relative z-10 w-[200px] h-[240px] sm:w-[220px] sm:h-[220px] md:w-[200px] md:h-[310px] lg:w-[250px] lg:h-[340px] mx-auto rounded-full overflow-hidden flex items-center justify-center ">
             <Image
               src="https://i.ibb.co/WcDZNtJ/20230409234326-IMG-7354-removebg-removebg-preview.png"
               alt="profile"
