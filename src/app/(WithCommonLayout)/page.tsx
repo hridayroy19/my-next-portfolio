@@ -9,13 +9,25 @@ import WorksType from "@/components/home/WorkType";
 const Homepage = () => {
   return (
     <div className="overflow-x-hidden">
+      <div id="home">
       <Hero />
+      </div>
+      <div id="skill">
       <Skills />
+      </div>
+      <div id="projects">
       <Project />
+      </div>
+      <div id="work">
       <WorksType />
+      </div>
+      <div id="experience">
       <Study />
+      </div>
       <Blog/>
+      <div id="contact" >
       <Contact />
+      </div>
     </div>
   );
 };

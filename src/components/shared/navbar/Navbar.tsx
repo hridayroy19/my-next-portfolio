@@ -9,11 +9,22 @@ const Navbar = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleScroll = (id: any) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+      setIsOpen(false); 
+    }
+  };
+
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Projects", path: "/projects" },
-    { name: "Contact", path: "/contact" },
+    { name: "Home", id: "home" },
+    { name: "Skill", id: "skill" },
+    { name: "Projects", id: "projects" },
+    { name: "Work", id: "work" },
+    { name: "Experience", id: "experience" },
+    { name: "Blog", id: "blog" },
+    { name: "Contact", id: "contact" },
   ];
 
   return (
@@ -29,21 +40,21 @@ const Navbar = () => {
 
       {/* Desktop Menu */}
       <ul className="hidden lg:flex space-x-8">
-        {navLinks.map((link) => (
-          <li key={link.name}>
-            <Link
-              href={link.path}
-              className={`text-lg font-semibold ${
-                pathname === link.path
-                  ? "text-cyan-400 underline"
-                  : "text-white hover:text-cyan-400"
-              }`}
-              aria-current={pathname === link.path ? "page" : undefined}
-            >
-              {link.name}
-            </Link>
-          </li>
-        ))}
+{navLinks.map((link) => (
+  <li key={link.name}>
+    <button
+      onClick={() => handleScroll(link.id)}
+      className={`text-lg font-semibold ${
+        pathname === "/" && link.id !== "/" && pathname === link.path
+          ? "text-cyan-400 underline"
+          : "text-white hover:text-cyan-400"
+      }`}
+    >
+      {link.name}
+    </button>
+  </li>
+))}
+
       </ul>
 
       {/* Mobile Icon */}

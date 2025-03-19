@@ -1,8 +1,8 @@
 "use client";
-
-import Lottie from "react-lottie";
+import dynamic from "next/dynamic";
 import okay from "../../../public/animationIcon/Okey.json";
 import Image from "next/image";
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 
 const techStack = [
   "https://i.ibb.co.com/RRBTN0k/krwhoz9rcovmi2npn8lg.png",
@@ -62,7 +62,7 @@ const Skills = () => {
         </div>
       </div>
 
-      {/* Lottie Animation Section */}
+      {/* Lottie Animation */}
       <div className="flex-1 flex justify-center mt-5 lg:mt-0">
         <div className="w-full max-w-[400px]  lg:max-w-[450px]">
           <Lottie options={defaultOptions} width="100%" height="100%" />

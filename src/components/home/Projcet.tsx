@@ -17,7 +17,7 @@ export interface IProduct {
 
 const Project = () => {
   const [projectData, setProjectData] = useState<IProduct[]>([]);
-  console.log(projectData);
+  // console.log(projectData);
 
   useEffect(() => {
     fetch("/projcet.json")

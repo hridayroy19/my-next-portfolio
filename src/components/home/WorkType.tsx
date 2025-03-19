@@ -1,6 +1,7 @@
 "use client";
-import Lottie from "react-lottie";
+import dynamic from "next/dynamic";
 import animation from "../../../public/animationIcon/Computer.json";
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 
 const WorksType = () => {
   const defaultOptions = {
@@ -13,7 +14,7 @@ const WorksType = () => {
   };
 
   const lottieContainerStyle = {
-    transform: "rotate(0deg)", // Counteract the default rotation
+    transform: "rotate(0deg)", 
   };
 
   const services = [
@@ -38,8 +39,7 @@ const WorksType = () => {
   ];
 
   return (
-    <div className="  text-white max-w-7xl mx-auto"
-    >
+    <div className="  text-white max-w-7xl mx-auto">
       <h1
         data-aos="fade-up"
         data-aos-duration="2000"
