@@ -5,11 +5,11 @@ import Project from "@/components/home/Projcet";
 import Skills from "@/components/home/Skills";
 import Study from "@/components/home/Study";
 import WorksType from "@/components/home/WorkType";
-import { currentUser } from "@/services/AuthService";
+import { getBlog } from "@/services/blog";
 
 const Homepage = async () => {
-  const user = await currentUser()
-console.log(user,"data")
+  const blog= await getBlog()
+
   return (
     <div className="overflow-x-hidden">
       <div id="home">
@@ -27,7 +27,7 @@ console.log(user,"data")
       <div id="experience">
         <Study />
       </div>
-      <Blog />
+      <Blog blog={blog.result} />
       <div id="contact">
         <Contact />
       </div>

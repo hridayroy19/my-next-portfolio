@@ -44,7 +44,7 @@ export default function AddProjcetForm() {
   } = form;
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-    const FormData = {
+    const FormData:ProjectData = {
       project_name: data.project_name,
       title: data.title,
       about: data.about,
