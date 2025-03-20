@@ -18,11 +18,11 @@ const Navbar = () => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
-      setIsOpen(false); 
+      setIsOpen(false);
     }
   };
 
-  const navLinks:NavLink[] = [
+  const navLinks: NavLink[] = [
     { name: "Home", id: "home" },
     { name: "Skill", id: "skill" },
     { name: "Projects", id: "projects" },
@@ -44,21 +44,24 @@ const Navbar = () => {
 
       {/* Desktop Menu */}
       <ul className="hidden lg:flex space-x-8">
-{navLinks.map((link) => (
-  <li key={link.name}>
-    <button
-      onClick={() => handleScroll(link.id)}
-      className={`text-lg font-semibold ${
-        pathname === "/" && link.id !== "/" && pathname === link.id
-          ? "text-cyan-400 underline"
-          : "text-white hover:text-cyan-400"
-      }`}
-    >
-      {link.name}
-    </button>
-  </li>
-))}
+        {navLinks.map((link) => (
+          <li key={link.name}>
+            <button
+              onClick={() => handleScroll(link.id)}
+              className={`text-lg font-semibold ${
+                pathname === "/" && link.id !== "/" && pathname === link.id
+                  ? "text-cyan-400 underline"
+                  : "text-white hover:text-cyan-400"
+              }`}
+            >
+              {link.name}
+            </button>
+          </li>
+        ))}
 
+        <li className="text-lg font-semibold text-white hover:text-cyan-400 ">
+          <Link href="dashboard">Dashboard</Link>
+        </li>
       </ul>
 
       {/* Mobile Icon */}

@@ -5,8 +5,11 @@ import Project from "@/components/home/Projcet";
 import Skills from "@/components/home/Skills";
 import Study from "@/components/home/Study";
 import WorksType from "@/components/home/WorkType";
+import { currentUser } from "@/services/AuthService";
 
-const Homepage = () => {
+const Homepage = async () => {
+  const user = await currentUser()
+console.log(user,"data")
   return (
     <div className="overflow-x-hidden">
       <div id="home">
