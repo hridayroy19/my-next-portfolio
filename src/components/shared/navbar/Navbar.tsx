@@ -1,8 +1,9 @@
 "use client";
 
+import { currentUser } from "@/services/AuthService";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoCloseSharp, IoMenu } from "react-icons/io5";
 
 type NavLink = {
@@ -13,6 +14,18 @@ type NavLink = {
 const Navbar = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+
+  const [user, setUser] = useState<any>(null);
+  console.log(user);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await currentUser();
+      setUser(data);
+      console.log(data);
+    };
+    fetchData();
+  }, []);
 
   const handleScroll = (id: string) => {
     const section = document.getElementById(id);
@@ -58,10 +71,12 @@ const Navbar = () => {
             </button>
           </li>
         ))}
-
-        <li className="text-lg font-semibold text-white hover:text-cyan-400 ">
-          <Link href="dashboard">Dashboard</Link>
-        </li>
+        {/* Conditional Rendering for Admin */}
+        {user && user.role === 'admin' && (
+          <li className="text-lg font-semibold text-white hover:text-cyan-400 ">
+            <Link href="dashboard">Dashboard</Link>
+          </li>
+        )}
       </ul>
 
       {/* Mobile Icon */}
@@ -92,6 +107,16 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
+          {/* Conditional Rendering for Admin */}
+          {user && user.role === 'admin' && (
+            <Link
+              href="dashboard"
+              className="block text-lg font-semibold text-white hover:text-cyan-400"
+              onClick={() => setIsOpen(false)}
+            >
+              Dashboard
+            </Link>
+          )}
         </div>
       )}
     </div>
