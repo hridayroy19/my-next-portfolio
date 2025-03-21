@@ -48,7 +48,7 @@ const Project = ({ projects }: { projects: IProduct[] }) => {
               {/* Details Button */}
               <div className="flex mt-5 items-center gap-4 text-3xl">
                 <button className="relative text-sm border-2 border-cyan-500 bg-transparent py-1 px-2 font-medium uppercase">
-                  <Link href={`/projects/${project?._id}`}>Details</Link>
+                  <Link href={`/projcets/${project?._id}`}>Details</Link>
                 </button>
 
                 <button className="relative text-sm border-2 border-cyan-500 bg-transparent py-1 px-2 font-medium uppercase">

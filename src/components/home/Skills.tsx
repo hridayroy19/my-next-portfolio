@@ -17,7 +17,9 @@ const techStack = [
   "https://i.ibb.co/8KB10fJ/javascript-logo-8892-AEFCAC-seeklogo-com-removebg-preview.png",
   "https://i.ibb.co/wsWGjJs/png-clipart-node-js-javascript-npm-computer-icons-web-application-others-miscellaneous-text-removebg.png",
   "https://i.ibb.co/0VYGYbf/download-1.png",
-  "https://i.ibb.co/pK6cFLz/download-2-removebg-preview.png",
+  "https://i.ibb.co.com/sJw1fn2S/download-5.jpg",
+  "https://i.ibb.co.com/QFrLHmLY/download.png",
+  "https://i.ibb.co.com/232NXxK6/67470890-removebg-preview.png",
 ];
 
 const Skills = () => {
