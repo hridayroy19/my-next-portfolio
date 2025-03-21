@@ -14,7 +14,9 @@ const BlogDetails = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/blog/${id}`);
+        const res = await fetch(
+          `${process.env.NEXT_PUBLIC_BASE_API}/api/blog/${id}`
+        );
         console.log(res);
         const result = await res.json();
         console.log(result);
@@ -58,27 +60,27 @@ const BlogDetails = () => {
         {/* Blog Paragraphs */}
         <p className="text-white mb-4">{blog.description}</p>
         <p className="text-white mb-4">
-          <span className="text-xl font-semibold">Accuracy : </span>{" "}
+          <span className="text-xl font-semibold">Accuracy : </span>
           {blog.accuracy}
         </p>
 
         {/* Quote */}
         <blockquote className="border-l-4 border-pink-400 bg-pink-50 p-4 italic text-gray-800 mb-4">
-          <span className="text-xl font-semibold">Optimization : </span>{" "}
+          <span className="text-xl font-semibold">Optimization : </span>
           {blog.optimization}
         </blockquote>
 
         {/* Final Paragraph */}
         <p className="text-white mb-4">
-          <span className="text-xl font-semibold">Practicality : </span>{" "}
+          <span className="text-xl font-semibold">Practicality : </span>
           {blog.practicality}
         </p>
         <p className="text-white mb-4">
-          <span className="text-xl font-semibold">Reliability : </span>{" "}
+          <span className="text-xl font-semibold">Reliability : </span>
           {blog.reliability}
         </p>
         <p className="text-white mb-4">
-          <span className="text-xl font-semibold">Scalable : </span>{" "}
+          <span className="text-xl font-semibold">Scalable : </span>
           {blog.scalable}
         </p>
       </div>

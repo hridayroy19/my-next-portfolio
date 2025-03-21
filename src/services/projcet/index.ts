@@ -5,7 +5,7 @@ import { ProjectData } from "@/components/dashboard/projcet/projcetForm/ProjcetF
 export const addProduct = async (productData: ProjectData): Promise<any> => {
   console.log(productData, "main data")
   try {
-    const res = await fetch(`http://localhost:5000/api/projcet/create`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/api/projcet/create`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -22,7 +22,7 @@ export const addProduct = async (productData: ProjectData): Promise<any> => {
 
 export const getProjcet = async () => {
   try {
-    const res = await fetch("http://localhost:5000/api/projcet/all", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/api/projcet/all`, {
       cache: "no-store"
     });
 

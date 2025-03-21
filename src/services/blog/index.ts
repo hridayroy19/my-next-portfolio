@@ -5,8 +5,8 @@ import { IBloge } from "@/type";
 
 export const getBlog = async () => {
   try {
-    const res = await fetch("http://localhost:5000/api/blog/all", {
-      cache: "no-store" // Avoid caching issues on server components
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/api/blog/all`, {
+      cache: "no-store"
     });
 
     if (!res.ok) {
@@ -26,7 +26,7 @@ export const getBlog = async () => {
 export const addBlog = async (blogData: IBloge): Promise<any> => {
   console.log(blogData, "main data");
   try {
-    const res = await fetch("http://localhost:5000/api/blog/create-blog", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/api/blog/create-blog`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
