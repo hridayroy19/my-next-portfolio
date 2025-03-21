@@ -64,7 +64,7 @@ export default function Hero() {
                 <CiFacebook size={28} />
               </Link>
               <Link
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/hridoy-chandra-roy-9313732a4/"
                 target="_blank"
                 className="text-cyan-400 hover:scale-110 transition"
               >
