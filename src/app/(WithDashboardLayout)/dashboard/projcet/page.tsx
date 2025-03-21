@@ -7,8 +7,11 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import AddProjcetForm from "@/components/dashboard/projcet/projcetForm/ProjcetForm";
+import ProjcetTabil from "@/components/dashboard/projcet/projcetTabil/ProjcetTabil";
+import { getProjcet } from "@/services/projcet";
 
-const Projcetpage = () => {
+const Projcetpage = async () => {
+  const projcet = await getProjcet()
   return (
     <div className="p-6">
       {/* Top Navbar area with button */}
@@ -27,32 +30,7 @@ const Projcetpage = () => {
       </div>
 
       {/* Table */}
-      <div className="overflow-x-auto">
-        <table className="min-w-full bg-white rounded shadow">
-          <thead>
-            <tr className="bg-gray-100 text-left text-gray-600 uppercase text-sm">
-              <th className="py-3 px-4">#</th>
-              <th className="py-3 px-4">Product Name</th>
-              <th className="py-3 px-4">Category</th>
-              <th className="py-3 px-4">Price</th>
-              <th className="py-3 px-4">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {/* Example row */}
-            <tr className="border-b hover:bg-gray-50">
-              <td className="py-3 px-4">1</td>
-              <td className="py-3 px-4">Portfolio Website</td>
-              <td className="py-3 px-4">Web</td>
-              <td className="py-3 px-4">$300</td>
-              <td className="py-3 px-4 space-x-2">
-                <button className="text-blue-600 hover:underline">Edit</button>
-                <button className="text-red-600 hover:underline">Delete</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <ProjcetTabil projcet={projcet.result} />
     </div>
   );
 };

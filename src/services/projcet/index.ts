@@ -5,7 +5,7 @@ import { ProjectData } from "@/components/dashboard/projcet/projcetForm/ProjcetF
 export const addProduct = async (productData: ProjectData): Promise<any> => {
   console.log(productData, "main data")
   try {
-    const res = await fetch(`http://localhost:5000/product`, {
+    const res = await fetch(`http://localhost:5000/api/projcet/create`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -31,7 +31,7 @@ export const getProjcet = async () => {
     }
 
     const data = await res.json();
-    console.log("Fetched Users:", data);
+    // console.log("Fetched Users:", data);
     return data;
   } catch (error: any) {
     console.error("Error fetching users:", error.message);

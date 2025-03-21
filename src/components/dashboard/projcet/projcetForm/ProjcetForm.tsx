@@ -57,7 +57,7 @@ export default function AddProjcetForm() {
     // console.log(FormData);
     try {
       const res = await addProduct(FormData);
-
+console.log(res,"final data")
       if (res.success) {
         toast.success(res.message);
       } else {
