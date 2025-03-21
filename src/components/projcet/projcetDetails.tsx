@@ -8,7 +8,7 @@ export default function ProjectDetails() {
   console.log(id);
 
   return (
-    <div className="bg-gray-600 py-20 ">
+    <div className="bg-gray-600 py-20 h-screen ">
       <div className="p-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
         <div className="rounded-xl overflow-hidden">
           <Image
@@ -64,23 +64,6 @@ export default function ProjectDetails() {
               🚀 SERVER CODE
             </a>
           </div>
-        </div>
-      </div>
-      <div className="text-white p-6  px-32 mt-10">
-        <h1 className="text-xl font-black"> Features Delivered:</h1>
-        <div className="mt-3">
-          <p>
-            1️⃣ User Authentication: Secure login, registration, and password
-            recovery.
-          </p>
-          <p>
-            1️⃣ User Authentication: Secure login, registration, and password
-            recovery.
-          </p>
-          <p>
-            1️⃣ User Authentication: Secure login, registration, and password
-            recovery.
-          </p>
         </div>
       </div>
     </div>

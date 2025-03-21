@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
+import Loading from "../ui/loading";
 export interface IBlog {
   _id: string;
   name: string;
@@ -16,7 +16,10 @@ export interface IBlog {
 }
 
 const Blog = ({ blog }: { blog: IBlog[] }) => {
-  console.log(blog, "data");
+
+  if (!blog) {
+    return <Loading/>
+  }
   return (
     <div className="lg:py-10 py-7 text-white xl:px-24 md:px-6 px-4">
       <h1 className="text-center uppercase font-bold text-white text-3xl lg:text-4xl mb-16">

@@ -6,9 +6,12 @@ import Skills from "@/components/home/Skills";
 import Study from "@/components/home/Study";
 import WorksType from "@/components/home/WorkType";
 import { getBlog } from "@/services/blog";
+import { getProjcet } from "@/services/projcet";
 
 const Homepage = async () => {
   const blog= await getBlog()
+  const projects= await getProjcet()
+  // console.log(project,"fast get")
 
   return (
     <div className="overflow-x-hidden">
@@ -19,7 +22,7 @@ const Homepage = async () => {
         <Skills />
       </div>
       <div id="projects">
-        <Project />
+        <Project projects={projects.result} />
       </div>
       <div id="work">
         <WorksType />
