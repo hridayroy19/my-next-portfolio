@@ -1,5 +1,4 @@
 "use client";
-
 import { loginUser } from "@/services/AuthService";
 import Link from "next/link";
 import { FaGoogle } from "react-icons/fa";
@@ -8,6 +7,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 const LoginForm = () => {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -20,16 +20,14 @@ const LoginForm = () => {
     });
   };
 
-  const router = useRouter();
-
   const handelLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
       const res = await loginUser(formData);
       console.log(res);
-      if (res?.success) {
-        toast.success(res?.message);
+      if (res?.data) {
         router.push("/");
+        toast.success(res?.message);
       } else {
         toast.error(res?.message);
       }

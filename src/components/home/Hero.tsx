@@ -43,8 +43,14 @@ export default function Hero() {
           {/* Button + Socials */}
           <div className="mt-6 flex flex-col sm:flex-row sm:items-center gap-5 justify-center lg:justify-start">
             <button className="flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-cyan-600 text-white px-5 py-2 rounded-full shadow-lg hover:scale-105 transition">
-              <FiDownload />
-              Download CV
+              <a
+                className="flex items-center gap-1"
+                href="/animationIcon/resume.pdf"
+                download
+              >
+                <FiDownload />
+                Download CV
+              </a>
             </button>
 
             {/* Socials */}
@@ -57,7 +63,7 @@ export default function Hero() {
                 <BsGithub size={28} />
               </Link>
               <Link
-                href="https://facebook.com"
+                href="https://www.facebook.com/hridayray.hriday.1/"
                 target="_blank"
                 className="text-cyan-400 hover:scale-110 transition"
               >
