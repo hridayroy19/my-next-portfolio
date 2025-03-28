@@ -3,13 +3,13 @@ import Sidebar from "@/components/dashboard/sidbar/Sidebar";
 
 const CommonLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div>
-      <div className="flex min-h-screen bg-gray-100">
+    <div className="flex w-full justify-between mx-auto">
+      <div className="lg:w-[300px] border-2 ">
         <Sidebar />
-        <div className="flex flex-col flex-1">
-          <Header />
-          <div className="p-4 pt-0 min-h-screen">{children}</div>
-        </div>
+      </div>
+      <div className=" w-full">
+        <Header />
+        <main className="p-4 pt-0 min-h-screen">{children}</main>
       </div>
     </div>
   );

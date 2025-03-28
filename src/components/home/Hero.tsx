@@ -1,15 +1,16 @@
 "use client";
-import Typewriter from "typewriter-effect";
+// import Typewriter from "typewriter-effect";
 import Image from "next/image";
 import { FiDownload } from "react-icons/fi";
 import Link from "next/link";
 import { BsGithub } from "react-icons/bs";
 import { CiFacebook } from "react-icons/ci";
 import { FaLinkedin } from "react-icons/fa6";
+import { Button } from "../ui/button";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 md:px-7 lg:px-20">
+    <section className="min-h-screen flex items-center justify-center px-6 md:px-10 xl:px-20">
       <div className="flex md:flex-row flex-col-reverse items-center gap-12 w-full max-w-7xl">
         {/* Left side */}
         <div className="flex-1 text-start">
@@ -17,8 +18,8 @@ export default function Hero() {
             My Name is <span className="text-cyan-400">Hridoy</span>
           </h1>
           <div className="flex gap-2 md:text-2xl text-lg md:leading-normal leading-5 mt-4 font-bold text-gray-300 justify-start">
-            <span> I&#39;m a </span>
-            <span>
+            <span> I&#39;m a Full Stack Developer </span>
+            {/* <span>
               <Typewriter
                 options={{
                   strings: [
@@ -31,7 +32,7 @@ export default function Hero() {
                   delay: 120,
                 }}
               />
-            </span>
+            </span> */}
           </div>
           <p className="text-gray-400 mt-4 max-w-md mx-auto lg:mx-0">
             I&apos;m a dedicated web developer passionate about blending
@@ -42,7 +43,7 @@ export default function Hero() {
 
           {/* Button + Socials */}
           <div className="mt-6 flex flex-col sm:flex-row sm:items-center gap-5 justify-center lg:justify-start">
-            <button className="flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-cyan-600 text-white px-5 py-2 rounded-full shadow-lg hover:scale-105 transition">
+            <Button className="flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-cyan-600 text-white px-5 py-2 rounded-full shadow-lg hover:scale-105 transition">
               <a
                 className="flex items-center gap-1"
                 href="/animationIcon/resume.pdf"
@@ -51,7 +52,7 @@ export default function Hero() {
                 <FiDownload />
                 Download CV
               </a>
-            </button>
+            </Button>
 
             {/* Socials */}
             <div className="flex gap-4">
