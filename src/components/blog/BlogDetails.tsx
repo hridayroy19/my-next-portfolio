@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { IBlog } from "../home/Blog";
-
+import parse from "html-react-parser";
 const BlogDetails = () => {
   const params = useParams();
   const { id } = params;
@@ -58,7 +58,7 @@ const BlogDetails = () => {
         </h3>
 
         {/* Blog Paragraphs */}
-        <p className="text-white mb-4">{blog.description}</p>
+        <p className="text-white mb-4">{parse(blog.description)}</p>
         <p className="text-white mb-4">
           <span className="text-xl font-semibold">Accuracy : </span>
           {blog.accuracy}

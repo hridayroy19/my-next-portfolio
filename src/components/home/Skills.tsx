@@ -21,7 +21,7 @@ const Skills = ({ technology }: { technology: ITechnology[] }) => {
     return <p>Loading ...</p>;
   }
 
-  console.log(technology, "skill data");
+  // console.log(technology, "skill data");
 
   const defaultOptions = {
     loop: true,

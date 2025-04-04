@@ -20,21 +20,21 @@ const WorksType = () => {
   const services = [
     {
       id: "01",
-      name: "React js Developer",
+      name: "React.js / Next.js Developer",
       description:
-        "Designing dynamic interfaces, managing state flawlessly, and integrating data seamlessly—your knack for React development fuels high-performance, collaborative, and innovative web experiences.",
+        "I build dynamic, scalable interfaces using React.js and Next.js—which deliver high-performance, user-centric web applications with seamless state management and data integration.",
     },
     {
       id: "02",
-      name: "Front-end Developer",
+      name: "Backend / Node.js Developer",
       description:
-        "Creating captivating interfaces, and integrating data flawlessly—your expertise as a front-end developer drives high-performance, collaborative, and innovative web experiences.",
+        "As an expert in Node.js, I build powerful server-side applications and manage databases with precision - delivering seamless performance, optimized data flow, and scalable solutions. I am passionate about building efficient, secure, and maintainable backend systems that deliver exceptional user experiences.",
     },
     {
       id: "03",
-      name: "MERN Stack Developer",
+      name: "Full-Stack Developer",
       description:
-        "Crafting captivating interfaces, and integrating data flawlessly within the MERN stack—your expertise drives high-performance, collaborative, and innovative web experiences from end to end.",
+        "Bringing both front-end interfaces and back-end systems to life—my role as a full stack developer ensures seamless, high-performance, and innovative web experiences from start to finish.",
     },
   ];
 

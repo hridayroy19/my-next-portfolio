@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { FiLogOut } from "react-icons/fi";
 
 export default function Header() {
-  const router = useRouter(); // Initialize useRouter hook
+  const router = useRouter(); 
 
   const handleLogout = async () => {
     await logout();

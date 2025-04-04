@@ -13,6 +13,11 @@ export interface IProduct {
   github_link_clint: string;
   github_link_server: string;
   live_link: string;
+  future_one:string
+  future_tow:string
+  future_three:string
+  future_four:string
+  description:string
 }
 
 const Project = ({ projects }: { projects: IProduct[] }) => {

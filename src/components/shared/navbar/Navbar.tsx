@@ -23,7 +23,7 @@ const Navbar = () => {
     const fetchData = async () => {
       const data = await currentUser();
       setUser(data);
-      console.log(data);
+      // console.log(data);
     };
     fetchData();
   }, []);
@@ -73,7 +73,7 @@ const Navbar = () => {
           </li>
         ))}
         {/* Conditional Rendering for Admin */}
-        {user && user.role === 'admin' && (
+        {user && user.role === "admin" && (
           <li className="text-lg font-semibold text-white hover:text-cyan-400 ">
             <Link href="dashboard">Dashboard</Link>
           </li>
@@ -109,7 +109,7 @@ const Navbar = () => {
             </Link>
           ))}
           {/* Conditional Rendering for Admin */}
-          {user && user.role === 'admin' && (
+          {user && user.role === "admin" && (
             <Link
               href="dashboard"
               className="block text-lg font-semibold text-white hover:text-cyan-400"

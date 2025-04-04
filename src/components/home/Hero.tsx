@@ -17,22 +17,8 @@ export default function Hero() {
           <h1 className="text-white text-3xl lg:text-4xl xl:text-5xl  font-bold">
             My Name is <span className="text-cyan-400">Hridoy</span>
           </h1>
-          <div className="flex gap-2 md:text-2xl text-lg md:leading-normal leading-5 mt-4 font-bold text-gray-300 justify-start">
-            <span> I&#39;m a Full Stack Developer </span>
-            {/* <span>
-              <Typewriter
-                options={{
-                  strings: [
-                    "MERN Stack Web Developer 💻..",
-                    "React Developer 💻..",
-                    "Front End Developer 🧑‍💻..",
-                  ],
-                  autoStart: true,
-                  loop: true,
-                  delay: 120,
-                }}
-              />
-            </span> */}
+          <div className="flex gap-2 text-cyan-400 md:text-2xl text-lg md:leading-normal leading-5 mt-4 font-bold  justify-start">
+            Full Stack Developer
           </div>
           <p className="text-gray-400 mt-4 max-w-md mx-auto lg:mx-0">
             I&apos;m a dedicated web developer passionate about blending
@@ -45,9 +31,9 @@ export default function Hero() {
           <div className="mt-6 flex flex-col sm:flex-row sm:items-center gap-5 justify-center lg:justify-start">
             <Button className="flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-cyan-600 text-white px-5 py-2 rounded-full shadow-lg hover:scale-105 transition">
               <a
-                className="flex items-center gap-1"
                 href="/animationIcon/resume.pdf"
                 download
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-cyan-600 text-white px-5 py-2 rounded-full shadow-lg hover:scale-105 transition"
               >
                 <FiDownload />
                 Download CV
