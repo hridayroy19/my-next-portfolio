@@ -16,17 +16,16 @@ export interface IBlog {
 }
 
 const Blog = ({ blog }: { blog: IBlog[] }) => {
-
   if (!blog) {
-    return <Loading/>
+    return <Loading />;
   }
   return (
-    <div className="lg:py-10 py-7 text-white xl:px-24 md:px-6 px-4">
-      <h1 className="text-center uppercase font-bold text-white text-3xl lg:text-4xl mb-16">
+    <div className=" py-7 text-white xl:px-24 md:px-6 px-4">
+      <h1 className="text-center uppercase font-bold text-white text-3xl lg:text-5xl mb-16">
         Blog
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {blog.map((blog) => (
+        {blog?.map((blog) => (
           <div
             key={blog._id}
             className="hover:animate-background rounded-xl bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 p-0.5 shadow-xl transition hover:bg-[length:400%_400%] hover:shadow-xs hover:[animation-duration:_4s] dark:shadow-gray-700/25"
@@ -40,9 +39,11 @@ const Blog = ({ blog }: { blog: IBlog[] }) => {
                 className="w-[350px] h-[250px] mb-5 flex mx-auto"
               />
               <div className="block text-xs dark:text-gray-400">
-                {blog.publishedDate}
+                {blog?.publishedDate}
               </div>
-              <h3 className="mt-0.5 text-xl font-medium">{blog.name}</h3>
+              <h3 className="mt-0.5 text-xl font-medium">
+                {blog?.name.slice(0, 30)}..
+              </h3>
 
               <div className="mt-4 flex flex-wrap gap-1">
                 <button className="rounded-full py-2 bg-purple-100 px-2 text-xs whitespace-nowrap text-purple-600 dark:bg-purple-600 dark:text-purple-100">

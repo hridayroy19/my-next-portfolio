@@ -5,10 +5,10 @@ const Study = () => {
   return (
     <section
       id="hireme"
-      className="lg:py-32 md:mt-14 mt-14 px-6 sm:px-10 lg:px-20 text-white"
+      className="lg:py-28 py-10  px-6 sm:px-10 lg:px-20 text-white"
     >
       <div className="text-center">
-        <h3 className="text-3xl sm:text-4xl mb-10 font-semibold">
+        <h3 className="text-3xl lg:text-5xl mb-10 font-semibold">
           Academic & Course Experience
         </h3>
       </div>

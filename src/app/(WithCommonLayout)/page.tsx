@@ -10,9 +10,9 @@ import { getProjcet } from "@/services/projcet";
 import { getTechnology } from "@/services/technology";
 
 const Homepage = async () => {
-  const blog= await getBlog()
-  const projects= await getProjcet()
-  const technology = await getTechnology()
+  const blog = await getBlog();
+  const projects = await getProjcet();
+  const technology = await getTechnology();
   // console.log(project,"fast get")
 
   return (

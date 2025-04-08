@@ -31,7 +31,7 @@ const Contact = () => {
   return (
     <div className=" px-4 sm:px-6 lg:px-10 text-white">
       <div className="text-center mt-8">
-        <h3 className="text-3xl sm:text-4xl font-semibold">
+        <h3 className="text-3xl lg:text-5xl font-semibold">
           Contact <span className="text-cyan-600">Me</span>
         </h3>
         <p className="text-gray-400 mt-3 text-lg">Get in touch</p>
