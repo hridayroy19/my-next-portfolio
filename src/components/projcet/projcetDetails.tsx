@@ -32,15 +32,15 @@ export default function ProjectDetails() {
   }
 
   return (
-    <div className="bg-gray-600 py-20 h-screen ">
+    <div className="bg-gray-600 py-20  ">
       <div className="p-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
         <div className="rounded-xl overflow-hidden">
           <Image
             src={project.imgOne}
             alt="image"
             width={900}
-            height={500}
-            className="rounded-xl shadow-lg"
+            height={700}
+            className="rounded-xl shadow-lg h-[400px] "
           />
         </div>
         <div>
@@ -81,6 +81,25 @@ export default function ProjectDetails() {
             </a>
           </div>
         </div>
+      </div>
+      <div className="w-full text-white p-6 max-w-6xl  mx-auto container items-center">
+        <h1 className="text-3xl text-green-500 font-medium mb-3">
+          Description
+        </h1>
+        <p className="mb-5 text-white ">
+          {project.description}
+        </p>
+        <h2 className="text-3xl text-green-500 font-medium mb-3">Features</h2>
+        <p>{project.future_one} </p>
+        <p>
+        {project.future_tow} 
+        </p>
+        <p>
+        {project.future_three} 
+        </p>
+        <p>
+        {project.future_four} 
+        </p>
       </div>
     </div>
   );

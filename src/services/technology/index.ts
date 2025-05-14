@@ -3,7 +3,7 @@
 import { ProjectData } from "@/components/dashboard/technology/TechnologyForm";
 
 export const addTechnology = async (productData: ProjectData): Promise<any> => {
-    console.log(productData, "main data")
+    // console.log(productData, "main data")
     try {
         const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/api/technology/create`, {
             method: "POST",

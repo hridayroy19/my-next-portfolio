@@ -7,10 +7,12 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import AddTechnologyForm from "@/components/dashboard/technology/TechnologyForm";
+import { getTechnology } from "@/services/technology";
+import TechnologyTabil from "@/components/dashboard/projcet/technology/TechnologyTabil";
 
 
 const Technologypage = async () => {
-  //   const projcet = await getProjcet()
+    const technology = await getTechnology()
   return (
     <div className="p-6">
       {/* Top Navbar area with button */}
@@ -29,7 +31,7 @@ const Technologypage = async () => {
       </div>
 
       {/* Table */}
-      {/* <ProjcetTabil projcet={projcet.result} /> */}
+      <TechnologyTabil projcet={technology.result} />
     </div>
   );
 };

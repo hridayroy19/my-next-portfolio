@@ -23,6 +23,11 @@ export interface ProjectData {
   github_link_client: string;
   github_link_server: string;
   live_link: string;
+  future_one:string
+  future_tow:string
+  future_three:string
+  future_four:string
+  description:string
 }
 
 export default function AddProjcetForm() {
@@ -36,6 +41,12 @@ export default function AddProjcetForm() {
       github_link_client: "",
       github_link_server: "",
       live_link: "",
+      future_one:"",
+      future_tow:"",
+      future_three:"",
+      future_four:"",
+      description:""
+
     },
   });
 
@@ -53,6 +64,11 @@ export default function AddProjcetForm() {
       github_link_client: data.github_link_client,
       github_link_server: data.github_link_server,
       live_link: data.live_link,
+      future_one:data.future_one,
+      future_tow:data.future_tow,
+      future_three:data.future_three,
+      future_four:data.future_four,
+      description:data.description
     };
     // console.log(FormData);
     try {
@@ -171,18 +187,87 @@ console.log(res,"final data")
                 </FormItem>
               )}
             />
+            <FormField
+              control={form.control}
+              name="future_one"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>projcet Fetures 1</FormLabel>
+                  <FormControl>
+                    <Input {...field} placeholder="projcet Fetures 1" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="future_tow"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Futures 2</FormLabel>
+                  <FormControl>
+                    <Input {...field} placeholder="Futures 2" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="future_three"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Futures 3</FormLabel>
+                  <FormControl>
+                    <Input {...field} placeholder="Futures 3" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="future_four"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Futures 4</FormLabel>
+                  <FormControl>
+                    <Input {...field} placeholder="Futures 4" />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
           </div>
 
-          <div className="my-4">
+          <div className="my-4 flex mx-auto gap-6">
             <FormField
               control={form.control}
               name="about"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>About / Description</FormLabel>
+                  <FormLabel>About</FormLabel>
                   <FormControl>
                     <textarea
-                      className="h-20 w-full border rounded resize-none p-2"
+                      className="h-20 w-full lg:w-[250px] border rounded resize-none p-2"
+                      {...field}
+                      placeholder="Write about the project"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="description"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Description</FormLabel>
+                  <FormControl>
+                    <textarea
+                      className="h-20 w-full  lg:w-[250px] border rounded resize-none p-2"
                       {...field}
                       placeholder="Write about the project"
                     />

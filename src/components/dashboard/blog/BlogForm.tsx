@@ -14,12 +14,15 @@ import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
 import { addBlog } from "@/services/blog";
 import { IBloge } from "@/type";
+import { Editor } from "@tinymce/tinymce-react";
+import { useRef } from "react";
 
 export default function BlogForm() {
+  const editorRef = useRef<any>(null);
   const form = useForm<IBloge>({
     defaultValues: {
       name: "",
-      publishedDate: "", 
+      publishedDate: "",
       image: "",
       description: "",
       practicality: "",
@@ -30,9 +33,22 @@ export default function BlogForm() {
     },
   });
 
-  const {
-    formState: { isSubmitting },
-  } = form;
+  const { setValue, handleSubmit, formState } = form;
+  const { isSubmitting } = formState;
+
+  // Handle TinyMCE initialization
+  const handleInit = (_evt: any, editor: any) => {
+    editorRef.current = editor;
+  };
+
+  // Sync TinyMCE content with form state
+  const handleEditorChange = () => {
+    if (editorRef.current) {
+      setValue("description", editorRef.current.getContent(), {
+        shouldValidate: true,
+      });
+    }
+  };
 
   const onSubmit: SubmitHandler<IBloge> = async (data) => {
     console.log(data, "data");
@@ -54,7 +70,7 @@ export default function BlogForm() {
   return (
     <div className="rounded-xl flex-grow w-full p-5">
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             {/* Blog Name */}
             <FormField
@@ -74,7 +90,7 @@ export default function BlogForm() {
             {/* Published Date */}
             <FormField
               control={form.control}
-              name="publishedDate" // ✅ FIXED
+              name="publishedDate"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Published Date</FormLabel>
@@ -161,7 +177,7 @@ export default function BlogForm() {
               )}
             />
 
-            {/* Scalable Flexibility */}
+            {/* Scalability */}
             <FormField
               control={form.control}
               name="scalable"
@@ -177,24 +193,19 @@ export default function BlogForm() {
             />
           </div>
 
-          {/* Description / About Blog */}
+          {/* Description (TinyMCE Editor) */}
           <div className="my-4">
-            <FormField
-              control={form.control}
-              name="description"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Description</FormLabel>
-                  <FormControl>
-                    <textarea
-                      className="h-20 w-full border rounded resize-none p-2"
-                      {...field}
-                      placeholder="Write about the blog"
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
+            <Editor
+              apiKey="5569hwpo4g40ruzvci03bsqervx18z7cmbao3lupel2z2f9g"
+              onInit={handleInit}
+              initialValue={form.getValues("description")}
+              init={{
+                height: 300,
+                menubar: false,
+                plugins: "lists link image",
+                toolbar: "undo redo | bold italic | bullist numlist outdent indent | link image",
+              }}
+              onEditorChange={handleEditorChange}
             />
           </div>
 

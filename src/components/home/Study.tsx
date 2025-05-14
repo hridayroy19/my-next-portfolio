@@ -19,15 +19,15 @@ const Study = () => {
               <h1 className="text-xl mb-2 text-yellow-300">
                 Diploma in Computer Technology
               </h1>
-              <p>Aptouch Polytechnic Institute, Dinajpur, Bangladesh</p>
-              <p>GPA: 4 (out of 3.65) 2020 - 2024</p>
+              <p>Aptouch Polytechnic Institute, Dinajpur</p>
+              <p>GPA: 3.65 (out of 4.00) | Year: 2020 - 2024</p>
             </div>
             <div className="mt-2 p-2">
               <h1 className="text-xl text-yellow-300">
                 Secondary School Certificate
               </h1>
-              <p>Vhander Khando High School, Dinajpur</p>
-              <p>GPA: 5 (out of 4.00) 2018 - 2020</p>
+              <p>Vhander Khando High School</p>
+              <p>GPA: 4.06 (out of 5.00) | Year: 2018 - 2020</p>
             </div>
             <div className="mt-2 p-2">
               <h1 className="text-xl text-yellow-300">
