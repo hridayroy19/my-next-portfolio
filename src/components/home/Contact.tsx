@@ -29,8 +29,8 @@ const Contact = () => {
     );
   };
   return (
-    <div className=" px-4 sm:px-6 lg:px-10 text-white">
-      <div className="text-center mt-8">
+    <div className=" px-4 bg-[#0e1423]/90 sm:px-6 lg:px-10 text-white">
+      <div className="text-center  ">
         <h3 className="text-3xl sm:text-4xl font-semibold">
           Contact <span className="text-cyan-600">Me</span>
         </h3>
