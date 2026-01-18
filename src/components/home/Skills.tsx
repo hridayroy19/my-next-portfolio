@@ -1,8 +1,9 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-import okay from "../../../public/animationIcon/Okey.json";
 import Image from "next/image";
+import okay from "../../../public/animationIcon/Okey.json";
 import { ITechnology } from "@/type";
 
 const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
@@ -12,16 +13,15 @@ const Skills = ({ technology }: { technology: ITechnology[] }) => {
 
   useEffect(() => {
     setIsClient(true);
-    return () => {
-      // Cleanup logic if necessary
-    };
   }, []);
 
-  if (!technology) {
-    return <p>Loading ...</p>;
+  if (!technology || technology.length === 0) {
+    return (
+      <section className="py-20 text-center text-gray-400">
+        <p>Technologies are not available right now.</p>
+      </section>
+    );
   }
-
-  // console.log(technology, "skill data");
 
   const defaultOptions = {
     loop: true,
@@ -33,45 +33,77 @@ const Skills = ({ technology }: { technology: ITechnology[] }) => {
   };
 
   return (
-    <div className=" xl:px-5 px-1">
-      <div className="flex flex-col lg:flex-row justify-evenly items-center gap-5 text-white w-full mx-auto px-4 md:px-8">
-        {/* Tech Stack Section */}
-        <div className="flex-1 xl:mb-8 lg:mb-0">
-          <h1 className="text-center uppercase font-bold text-white text-3xl lg:text-5xl mb-10">
+    <div className="bg-[#0e1423]/90">
+      <section
+        id="skill"
+        className="py-16 lg:py-10 px-4 sm:px-6 md:px-8 xl:px-20 overflow-hidden"
+      >
+        <div className="max-w-7xl mx-auto">
+          {/* Title */}
+          <h2 className="text-center uppercase font-bold text-white text-3xl sm:text-4xl lg:text-5xl mb-5 tracking-widest">
             Tech Stack
-          </h1>
-          <div className="p-6">
-            <div className="flex flex-wrap justify-center gap-6">
-              {technology?.map((skill, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col items-center bg-white p-3 rounded-lg shadow-md max-w-[120px] sm:max-w-[150px]"
-                >
-                  <Image
-                    src={skill.image}
-                    alt={skill.name}
-                    width={50}
-                    height={50}
-                    className="object-contain w-[50px] h-[40px]"
-                  />
-                  <p className="text-black font-semibold mt-2 text-center text-sm lg:text-base">
-                    {skill.name}
-                  </p>
-                </div>
-              ))}
+          </h2>
+
+          {/* Layout */}
+          <div className="flex flex-col lg:flex-row items-end justify-between gap-14">
+            {/* Skills Grid */}
+            <div className="w-full lg:w-1/2">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                {technology.map((skill, index) => (
+                  <div
+                    key={index}
+                    className="
+                      group
+                      bg-white/5
+                      backdrop-blur-md
+                      border border-white/10
+                      rounded-lg
+                      p-4
+                      flex flex-col items-center justify-center
+                      transition-all duration-300 ease-out
+                      hover:-translate-y-1.5
+                      hover:border-cyan-400/60
+                      hover:shadow-[0_0_18px_rgba(34,211,238,0.18)]
+                    "
+                  >
+                    {/* ICON */}
+                    <div
+                      className="
+                        mb-2
+                        transition-transform duration-300
+                        group-hover:scale-110
+                        group-hover:rotate-6
+                      "
+                    >
+                      <Image
+                        src={skill.image}
+                        alt={skill.name}
+                        width={36}
+                        height={36}
+                        className="w-[36px] h-[36px] object-contain"
+                      />
+                    </div>
+
+                    {/* TEXT */}
+                    <p className="text-gray-200 text-xs sm:text-sm font-medium tracking-wide text-center">
+                      {skill.name}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Lottie Animation */}
+            <div className="w-full lg:w-1/2 flex justify-center">
+              <div className="w-[260px] sm:w-[320px] md:w-[380px] lg:w-[550px]">
+                {isClient && (
+                  <Lottie options={defaultOptions} width="100%" height="100%" />
+                )}
+              </div>
             </div>
           </div>
         </div>
-
-        {/* Lottie Animation */}
-        <div className="flex-1 flex justify-center mt-5 lg:mt-0">
-          <div className="w-full max-w-[400px] lg:max-w-[500px]">
-            {isClient && (
-              <Lottie options={defaultOptions} width="100%" height="100%" />
-            )}
-          </div>
-        </div>
-      </div>
+      </section>
     </div>
   );
 };

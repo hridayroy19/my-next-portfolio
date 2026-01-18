@@ -1,6 +1,6 @@
 "use client";
+import Loading from "@/app/loading";
 import { IProduct } from "@/components/home/Projcet";
-import Loading from "@/components/ui/loading";
 
 const ProjcetTabil = ({ projcet }: { projcet: IProduct[] }) => {
 //   console.log(projcet);

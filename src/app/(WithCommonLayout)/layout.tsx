@@ -3,9 +3,9 @@ import Navbar from "@/components/shared/navbar/Navbar";
 
 const CommonLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="bg-gray-900  w-full ">
+    <div className="bg-[#0e1423]/90  w-full ">
       <Navbar />
-      <main className="min-h-screen lg:py-12 py-24 xl:py-2 md:py-14 "> {children}</main>
+      <main className="min-h-screen "> {children}</main>
       <Footer />
     </div>
   );

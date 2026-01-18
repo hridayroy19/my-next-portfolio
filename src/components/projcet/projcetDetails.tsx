@@ -3,7 +3,7 @@ import { useParams } from "next/navigation";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { IProduct } from "../home/Projcet";
-import Loading from "../ui/loading";
+import Loading from "@/app/loading";
 
 export default function ProjectDetails() {
   const params = useParams();
@@ -86,20 +86,12 @@ export default function ProjectDetails() {
         <h1 className="text-3xl text-green-500 font-medium mb-3">
           Description
         </h1>
-        <p className="mb-5 text-white ">
-          {project.description}
-        </p>
+        <p className="mb-5 text-white ">{project.description}</p>
         <h2 className="text-3xl text-green-500 font-medium mb-3">Features</h2>
         <p>{project.future_one} </p>
-        <p>
-        {project.future_tow} 
-        </p>
-        <p>
-        {project.future_three} 
-        </p>
-        <p>
-        {project.future_four} 
-        </p>
+        <p>{project.future_tow}</p>
+        <p>{project.future_three}</p>
+        <p>{project.future_four}</p>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 "use client";
-import Loading from "@/components/ui/loading";
+import Loading from "@/app/loading";
 import { IBloge } from "@/type";
 
 export const BlogDatas = ({ blog }: { blog: IBloge[] }) => {
